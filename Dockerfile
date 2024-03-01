@@ -4,7 +4,7 @@ WORKDIR /home/application
 
 ENV PYTHONDONTWRITEBYTECODE=1
 
-ENV PYTHONBUFFERED=1
+ENV PYTHONUNBUFFERED=1
 
 RUN pip install --upgrade pip
 
@@ -16,4 +16,6 @@ COPY ./ciphers_project ciphers_project/
 
 COPY ./entrypoint.sh .
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+RUN chmod +x entrypoint.sh
+
+EN
