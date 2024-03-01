@@ -1,6 +1,8 @@
 from django.http import JsonResponse
 from .ciphers import caesar_encode
 
+
+
 def greetings(request):
     result = {"message": "Welcome to the Ciphers service!"}
     return JsonResponse(result)
